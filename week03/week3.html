@@ -1,89 +1,62 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <!-- 拓展：利用锚点功能或者其他方式，纯css实现图片切换 -->
-    <style>
-      *{
-        padding: 0;
-        margin: 0;
-        list-style: none;
-        text-decoration: none;
-      }
-      #wrap{
-        width: 590px;
-        height: 470px;
-        margin: 50px auto;
-        /* border: 10px red solid; */
-        overflow: hidden;
-        position: relative;
-      }
-      img{
-        vertical-align: middle;
-      }
-      .imgs{
-        width: 2950px;
-      }
-      .imgs>img{
-        float: left;
-      }
-      .piont{
-        position: absolute;
-        left: 30px;
-        bottom: 20px;
-      }
-      .piont>a{
-        display: inline-block;
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background-color: rgb(243,206,139);
-        margin: 0 3px;
-        border: 2px solid transparent;
-        /* 背景色只到内容区，边框没有背景 */
-        background-clip: content-box;
-      }
-      .piont>a:hover{
-        background-color: #fff;
-        border: 2px solid rgb(100,100,109);
-      }
-    </style>
-  </head>
-  <body>
-    <!-- 
-     手写轮播图两种写法（结合js）
-       1、float
-       2、定位方式
-    -->
-    <!--3、swiper插件一种写法 （会引用，会修改即可） -->
-    <!-- 轮播图 -->
-    <div id="wrap">
-      <!-- 图片 -->
-      <div class="imgs">
-        <img src="./img/1.jpg" alt="">
-        <img src="./img/2.jpg" alt="">
-        <img src="./img/3.jpg" alt="">
-        <img src="./img/4.jpg" alt="">
-        <img src="./img/5.jpg" alt="">
-      </div>
-      <!-- 小圆点 -->
-      <div class="piont">
-        <a href="#"></a>
-        <a href="#"></a>
-        <a href="#"></a>
-        <a href="#"></a>
-        <a href="#"></a>
-      </div>
-      <!-- 上一张下一张 -->
-      <div>
-        <span></span>
-        <span></span>
-      </div>
+
+<!doctype html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+	<title>Franklin's Mental World 1.0</title>
+	<style>
+	  #pp2{
+		width:9999px;
+		height:1000px;
+		animation:switch 15s infinite;
+		}
+		#pp2>img{
+		float:left;
+		}
+		#pp1{
+		width:1000px;
+		height:auto;
+		overflow:hidden;
+		}
+		@keyframes switch{
+		0%{};
+		20%{transform:translateX(0px);}
+		40%{transform:translateX(-1000px);}
+		60%{transform:translateX(-2000px);}
+		80%{transform:translateX(-3000px);}
+		100%{transform:translateX(-4000px);}
+		}
+		.title{
+    width: 100%;
+    height: 50px;
+    background-color: rgb(0, 0, 0);
+    }
+    .right {
+    height: auto;
+    }
+	</style>
+</head>
+    <body bgcolor="purple">
+      <div class="title">
+        <h1 style="color:rgb(255, 255, 255); font-size:20px">Franklin's Mental World 1.0</h1>
     </div>
+	    <div id="pp1">
+		    <div id="pp2">
+			     <img src="./week03/29b6d31db6187a783de482bcaf851ed.png"/>
+			     <img src="./week03/6dd6b9cdc25cdd0cbdef75e1a7ecafe.png"/>
+			     <img src="./week03/90a86e13077b367d61e73d3e02dbaeb.png"/>
+			     <img src="./week03/96b71b632ec90e7986ea3af193e4513.png"/>
+			     <img src="./week03/eea79502d1d803ad90337176bfdb4a7.png"/>
+			</div>
+	    </div>
 
+      <div class="right">
+        <h1 style="color:#f4abac; font-size:20px">"Ways of Seeing," a book written by John Berger in the 1970s. In this book, Berger challenges the notion that visual experience is innocent, and argues that the way we see things is influenced by cultural, social, and political factors. Berger particularly focuses on how men and women are represented in visual culture, and how these representations impact their self-perception and behavior.
 
-  </body>
+          One of the key ideas in "Ways of Seeing" is the concept of the "male gaze," which refers to the way in which women are often depicted in visual culture as objects of male desire. Berger argues that this creates a power dynamic that reinforces traditional gender roles and objectifies women. He also notes that women can internalize these representations and come to see themselves as objects, rather than as active agents in the world.
+          
+          Overall, I think that "Ways of Seeing" remains an important and influential work in the field of visual culture, and its insights into the cultural and political dimensions of how we see and are seen continue to be relevant today.</h1>
+
+      </div>
+    </body>
 </html>
