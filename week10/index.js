@@ -43,8 +43,7 @@ function randomNum(min,max){
 
 function init(){
     var container = document.querySelector(".container");
-    var f = document.createDocumentFragment();//创建文档片段对象
-
+    var f = document.createDocumentFragment();
     words.forEach(w =>{
         var word_box=document.createElement('div');
         var word = document.createElement('div');
