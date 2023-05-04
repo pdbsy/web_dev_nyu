@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Inspiration</title>
+	<style>
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+			background-color: #f5f5f5;
+		}
+
+		h1 {
+			margin-top: 0;
+			margin-bottom: 1em;
+			color: #333;
+		}
+
+		textarea {
+			background-color: pink;
+			width: 70%;
+			height: 200px;
+			padding: 10px;
+			border-radius: 5px;
+			border: none;
+			resize: none;
+		}
+
+		.btn {
+			margin-top: 1em;
+			padding: 10px 20px;
+			background-color: #4285f4;
+			color: #fff;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		
+		#scrolling-text {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			background-color: #333;
+			color: #fff;
+			padding: 10px 0;
+			font-size: 1.2em;
+			text-align: center;
+			white-space: nowrap;
+			overflow: hidden;
+		}
+		
+		#scrolling-text span {
+			display: inline-block;
+			padding-left: 100%;
+			animation: marquee 10s linear infinite;
+		}
+		
+		@keyframes marquee {
+			0% { transform: translate(0, 0); }
+			100% { transform: translate(-100%, 0); }
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Inspiration</h1>
+		<textarea id="myText"></textarea>
+		<button class="btn" onclick="saveText()">Save</button>
+		<button class="btn" onclick="goBack()">Return</button>
+	</div>
+	
+	<div id="scrolling-text">
+		<span>"The best way to find out if you can trust somebody is to trust them." - Ernest Hemingway</span>
+		<span>"The most important thing is to enjoy your life - to be happy - it's all that matters." - Steve Jobs</span>
+		<span>"I'm not a self-made man. I've had a lot of help." - Stan Lee</span>
+		<span>"If you can't handle me at my worst, then you sure as hell don't deserve me at my best." - Marilyn Monroe</span>
+		<span>"If you can't handle me at my worst, then you sure as hell don't deserve me at my best." - Marilyn Monroe</span>
+	</div>
+
+	<script>
+		function saveText() {
+			var textToSave = document.getElementById("myText").value;
+			var textBlob = new Blob([textToSave], {type:"text/plain"});
+			var fileName = "mytextfile.txt";
+			var downloadLink = document.createElement("a");
+			downloadLink.download = fileName;
+			downloadLink.innerHTML = "Download File";
+			if (window.webkitURL != null) {
+				downloadLink.href = window.webkitURL.createObjectURL(textBlob);
+			} else {
+				downloadLink.href = window.URL.createObjectURL(textBlob);
+				downloadLink.onclick = destroyClickedElement;
+				downloadLink.style.display = "none";
+				document.body.appendChild(downloadLink);
+			}
+			downloadLink.click();
+		}
+
+		function goBack() {
+			window.location.href = "index.html";
+		}
+	</script>
+</body>
+</html>
+s

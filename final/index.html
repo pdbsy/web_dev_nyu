@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Website</title>
+    <style>
+     
+      .header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+      }
+
+      .header > p {
+        font-size: 72px;
+        font-family: 'calligraphy', cursive;
+        color: white;
+        text-shadow: 5px 5px 5px black, 0px 0px 2px black;
+      }
+
+      /* 设置按钮样式 */
+      .button {
+        display: inline-block;
+        padding: 30px 60px; /* 增加按钮尺寸 */
+        margin: 10px;
+        border-radius: 60px; /* 增加圆角尺寸 */
+        text-align: center;
+        font-size: 54px; /* 增加字体大小 */
+        font-weight: bold;
+        color: #fff;
+        text-decoration: none;
+        background: linear-gradient(to bottom, #0099ff, #ffc0cb, #00cc66); /* 设置背景渐变 */
+        transition: all 0.3s ease-in-out; /* 添加过渡效果 */
+      }
+      .button:hover {
+        transform: scale(1.1); /* 添加悬浮效果 */
+      }
+      /* 设置中间按钮样式 */
+      .button2 {
+        background: linear-gradient(to bottom, #c0ffe3, #1a5cd6);
+      }
+      /* 设置网页布局 */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(to bottom, #0099ff, #ffc0cb, #00cc66); /* 设置背景渐变 */
+      }
+      /* 设置按钮容器布局 */
+      .button-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <p><i>Franklin's Final Project</i></p>
+    </header>
+    <br>
+    <div class="button-container">
+      <a href="alert.html" class="button button2">Timer</a>
+      <a href="inspiration.html" class="button button2">Hints</a>
+      <a href="entertainment.html" class="button button2">Relax</a>
+    </div>
+  </body>
+</html>
