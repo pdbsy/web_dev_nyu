@@ -331,6 +331,14 @@
 ###### The webpage was created using HTML and CSS.
 
 ## User Testmonials
+###### The user is writing a draft:
+<img width="1277" alt="827a70603f44fbcba5e912b9c6423eb" src="https://user-images.githubusercontent.com/124060188/236702605-fe606394-5337-4889-8a8a-6e4b17f81031.png">
+
+###### Relax after he finish the draft:
+<img width="1271" alt="5bdba8d736f18659c10e464b98825f5" src="https://user-images.githubusercontent.com/124060188/236702651-b9ac9af8-35fb-453f-a730-b96da82f1596.png">
+
+###### Set a timer to stop playing and return to write the essay.
+<img width="1280" alt="46b78b888d38ccebc138503c6c8840a" src="https://user-images.githubusercontent.com/124060188/236702688-5ab5851c-3123-4e36-8046-aaf9f0cbdfb5.png">
 
 
 ## Credits
